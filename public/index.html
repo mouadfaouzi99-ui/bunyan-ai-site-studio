@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f4f2ed">
+  <title>بنيان — صايب موقعك بالذكاء الاصطناعي</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/contact.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#top" aria-label="بنيان الصفحة الرئيسية">
+        <span class="brand-mark">ب</span><span><b>بنيان</b><small>AI SITE STUDIO</small></span>
+      </a>
+      <div class="side-label">مساحة العمل</div>
+      <button class="nav-item active" data-nav="builder"><span class="nav-icon">✳</span> مولّد المواقع</button>
+      <button class="nav-item" data-nav="projects"><span class="nav-icon">▤</span> مشاريعي <span id="projectCount" class="nav-count">0</span></button>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-note"><span class="sparkle">✦</span><b>من الفكرة للموقع</b><p>وصف نشاطك، عدّل النتيجة، وصدّر صفحة جاهزة.</p><button id="contactBuilderBtn" class="sidebar-contact">بغيتي نخدمو ليك موقع؟ <span>تواصل معنا ↙</span></button></div>
+      <div class="profile-chip"><span class="avatar">م</span><span><b>مساحة شخصية</b><small>المشاريع محفوظة فهاد الجهاز</small></span></div>
+    </aside>
+
+    <main id="top" class="main-area">
+      <header class="topbar">
+        <div class="breadcrumb"><span>بنيان</span><i>/</i><b id="crumbTitle">مولّد المواقع</b></div>
+        <div class="top-actions"><span class="ai-status"><span class="status-dot"></span> AI Studio</span><button class="mobile-menu" id="mobileMenu" aria-label="فتح القائمة">☰</button></div>
+      </header>
+
+      <section class="intro-row">
+        <div><div class="eyebrow"><span>✦</span> WEBSITE BUILDER / 01</div><h1>حوّل فكرتك لموقع <em>كيبان مزيان.</em></h1><p>عطيه نبذة على النشاط ديالك، والذكاء الاصطناعي يوجّد المحتوى. من بعد تقدر تعدّل، تزيد الخريطة والتقييمات الحقيقية، وتصدّر موقعك.</p></div>
+        <div class="intro-badge"><span class="badge-glyph">✺</span><span><b>بلا كود</b><small>من وصف قصير لموقع قابل للتعديل</small></span></div>
+      </section>
+
+      <div class="workspace-grid" id="builderView">
+        <section class="builder-panel panel-card">
+          <div class="panel-heading"><div><span class="step-label">01 — تفاصيل المشروع</span><h2>شنو الموقع اللي بغيتي؟</h2></div><span class="panel-glyph">✎</span></div>
+          <form id="siteForm">
+            <div class="field-grid two-cols">
+              <label class="field">اسم النشاط<input id="businessName" maxlength="80" value="دار النعناع" placeholder="مثلاً: دار النعناع"></label>
+              <label class="field">نوع الموقع<select id="businessType"><option value="restaurant">مطعم</option><option value="cafe">كافيه</option><option value="hotel">فندق / رياض</option><option value="portfolio">صفحة تعريفية / portfolio</option></select></label>
+            </div>
+            <label class="field">وصف الطلب ديالك<textarea id="brief" rows="4" maxlength="1600" placeholder="مثلاً: بغيت موقع لمطعم مغربي عصري فمراكش، الأجواء دافئة، كنقدمو طاجين وكسكس، وبغيت الناس يحجزو بالطليفون.">موقع أنيق لمطعم مغربي عائلي فمراكش، أطباق تقليدية بلمسة عصرية، جلسة فناء هادئة، وإمكانية الحجز بالهاتف.</textarea><span class="field-hint">كتب شنو كيميز النشاط، شكون الزبناء، وشنو بغيتيهم يديرو.</span></label>
+            <div class="field-grid two-cols">
+              <label class="field">المدينة / العنوان<input id="location" maxlength="180" value="مراكش، المغرب" placeholder="المدينة أو العنوان"></label>
+              <label class="field">لغة الموقع<select id="siteLanguage"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option><option value="darija">الدارجة</option></select></label>
+            </div>
+            <div class="field-grid two-cols">
+              <label class="field">الهاتف<input id="phone" inputmode="tel" maxlength="32" placeholder="+212 6…"></label>
+              <label class="field">WhatsApp لاستقبال الحجوزات والتعاليق<input id="whatsapp" inputmode="tel" maxlength="32" placeholder="+212 6…"></label>
+            </div>
+            <div class="field-grid two-cols">
+              <label class="field">Instagram<input id="instagram" type="url" inputmode="url" placeholder="https://instagram.com/yourbusiness"></label>
+              <label class="field">ساعات العمل<input id="openingHours" maxlength="160" placeholder="كل نهار 09:00 — 22:00، الثلاثاء مسدود"></label>
+            </div>
+            <label class="field">المنيو / الخدمات<textarea id="offerings" rows="3" maxlength="1000" placeholder="مثال: طاجين دجاج بالليمون — 85 درهم&#10;فطور مغربي لشخصين — 120 درهم"></textarea><span class="field-hint">دخل أسماء وأثمنة صحيحة من عندك؛ الأثمنة ما غاديش نخليو الـAI يخمّنها.</span></label>
+            <details class="map-settings" open>
+              <summary><span class="summary-icon">⌖</span><span><b>الموقع والخريطة</b><small>حط رابط Google Maps أو رابط الخريطة المضمّنة.</small></span><span class="chevron">⌄</span></summary>
+              <div class="field-grid">
+                <label class="field">رابط المكان فـGoogle Maps<input id="mapUrl" type="url" inputmode="url" placeholder="https://maps.google.com/…"></label>
+                <label class="field">رابط الخريطة المضمّنة (اختياري)<input id="mapEmbedUrl" type="url" inputmode="url" placeholder="Google Maps → Share → Embed a map → انسخ src"></label>
+                <span class="field-hint">إلا ما عندكش رابط مضمّن، الموقع غادي يبيّن زر يفتح العنوان فـGoogle Maps. روابط Embed الرسمية قد تحتاج API key مقيّدة على دومين الموقع قبل النشر.</span>
+              </div>
+            </details>
+
+            <details class="map-settings review-settings" open>
+              <summary><span class="summary-icon">★</span><span><b>التقييمات وآراء الزبناء</b><small>دخل غير تعليقات حقيقية عندك الإذن تستعملها.</small></span><span class="chevron">⌄</span></summary>
+              <div class="field-grid">
+                <label class="field">رابط Google Maps لكتابة تقييم<input id="reviewUrl" type="url" inputmode="url" placeholder="رابط التقييم ديال Google Business Profile"><span class="field-hint">الزبون يقدر يكتب تقييم حقيقي فـGoogle Maps؛ الموقع ما كيسحبش ولا كيختلق التقييمات.</span></label>
+                <div class="review-form-row">
+                  <label class="field">اسم الزبون<input id="reviewName" maxlength="70" placeholder="الاسم أو الأحرف الأولى"></label>
+                  <label class="field rating-field">التقييم<select id="reviewRating"><option value="5">★★★★★ — 5</option><option value="4">★★★★☆ — 4</option><option value="3">★★★☆☆ — 3</option><option value="2">★★☆☆☆ — 2</option><option value="1">★☆☆☆☆ — 1</option></select></label>
+                </div>
+                <label class="field">تعليق الزبون<textarea id="reviewText" rows="2" maxlength="500" placeholder="لصق تعليق حقيقي بموافقة صاحبه"></textarea></label>
+                <button id="addReviewBtn" class="btn btn-soft btn-small" type="button">＋ زيد هاد التقييم</button>
+                <div id="reviewDrafts" class="review-drafts"><span class="empty-reviews">مازال ما زدتي حتى تقييم. ما كنولّدو حتى رأي وهمي.</span></div>
+              </div>
+            </details>
+
+            <label class="field">الستايل<select id="siteStyle"><option value="warm">دافئ ومغربي</option><option value="minimal">بسيط وعصري</option><option value="luxury">راقي وفاخر</option><option value="playful">مرح وملوّن</option></select></label>
+            <button class="btn btn-primary generate-btn" id="generateBtn" type="submit"><span>✦</span> ولّد محتوى الموقع بالـAI <i>↗</i></button>
+            <p class="privacy-note"><span>⌑</span> معلوماتك كتمشي للـAI باش يكتب النصوص. ما نطلبوش كود HTML؛ كنركّبو الموقع بقالب آمن وقابل للتعديل.</p>
+          </form>
+        </section>
+
+        <section class="preview-column">
+          <div class="preview-toolbar panel-card">
+            <div><span class="step-label">02 — المعاينة المباشرة</span><b id="previewStatus">نموذج تجريبي — بدّل المعلومات</b></div>
+            <div class="preview-actions"><div class="device-switch" role="group" aria-label="حجم المعاينة"><button class="device-btn active" data-device="desktop" title="حاسوب">▰</button><button class="device-btn" data-device="mobile" title="هاتف">▯</button></div><button class="icon-button" id="saveBtn" title="حفظ المشروع">♡</button></div>
+          </div>
+          <div class="preview-shell" id="previewShell">
+            <div class="browser-bar"><div class="browser-dots"><i></i><i></i><i></i></div><span id="previewAddress">dar-alnaanaa.site</span><button id="exportBtn" class="export-btn" disabled>تصدير HTML ↓</button></div>
+            <div class="site-preview" id="sitePreview" aria-live="polite"></div>
+          </div>
+          <div class="preview-footer"><span><i class="live-dot"></i> المعاينة كتتحدّث مع التعديلات</span><span>تصدير HTML مستقل</span></div>
+        </section>
+      </div>
+
+      <section id="projectsView" class="projects-view hidden">
+        <div class="projects-heading"><div><span class="step-label">المكتبة</span><h2>مشاريعك</h2><p>المشاريع محفوظة محلياً فهاد المتصفح.</p></div><button id="newProjectBtn" class="btn btn-primary">＋ مشروع جديد</button></div>
+        <div id="projectList" class="project-list"></div>
+      </section>
+      <footer class="page-footer"><span>بنيان <i>•</i> من فكرتك لموقعك</span><span>المشاريع المحفوظة فهاد الجهاز فقط</span></footer>
+    </main>
+  </div>
+  <div id="contactModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <form id="contactForm" class="contact-modal">
+      <button class="modal-close" id="closeContact" type="button" aria-label="إغلاق">×</button>
+      <span class="step-label">مشروعك الجاي</span><h2 id="contactTitle">بغيتي نبنيو ليك موقع؟</h2><p class="modal-copy">عمر التفاصيل، وغادي نوجدولك رسالة مرتبة باش تصيفطها لينا.</p>
+      <label class="field">الاسم<input id="leadName" maxlength="80" placeholder="الاسم ديالك" required></label>
+      <label class="field">شنو نوع الموقع؟<select id="leadType"><option>مطعم أو كافيه</option><option>فندق أو رياض</option><option>شركة توصيل</option><option>متجر</option><option>صفحة تعريفية</option><option>شي حاجة أخرى</option></select></label>
+      <label class="field">شرح لينا الفكرة<textarea id="leadBrief" rows="3" maxlength="800" placeholder="شنو النشاط والصفحات أو الخدمات اللي محتاج؟" required></textarea></label>
+      <details class="contact-destination"><summary>إعداد جهة التواصل</summary><label class="field">WhatsApp أو إيميل الاستقبال<input id="contactDestination" maxlength="120" placeholder="+212… أو hello@example.com"></label><span class="field-hint">كيتحفظ هاد الإعداد فهاد المتصفح فقط.</span></details>
+      <button class="btn btn-primary modal-submit" type="submit">وجد رسالة التواصل <span>↗</span></button>
+      <p class="modal-footnote">ما كنجمعوش الطلب فالسيرفر؛ غادي يتحل WhatsApp أو تطبيق الإيميل عندك.</p>
+    </form>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
